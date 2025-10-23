@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Changer Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-microphone-alt"></i>
+                <h1>Voice Changer Pro</h1>
+            </div>
+            <button class="dark-mode-toggle" id="darkModeToggle">
+                <i class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Recording Section -->
+            <section class="recording-section">
+                <div class="glass-panel">
+                    <h2>Record Your Voice</h2>
+                    <div class="waveform-container">
+                        <canvas id="waveform" width="800" height="200"></canvas>
+                    </div>
+                    <div class="recording-controls">
+                        <button class="record-btn" id="recordBtn">
+                            <i class="fas fa-microphone"></i>
+                            <span>Start Recording</span>
+                        </button>
+                        <button class="upload-btn" id="uploadBtn">
+                            <i class="fas fa-upload"></i>
+                            <span>Upload Audio</span>
+                        </button>
+                        <input type="file" id="audioFile" accept="audio/*" style="display: none;">
+                    </div>
+                    <div class="audio-controls" id="audioControls" style="display: none;">
+                        <button class="play-btn" id="playBtn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="download-btn" id="downloadBtn">
+                            <i class="fas fa-download"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Voice Effects Section -->
+            <section class="effects-section">
+                <div class="glass-panel">
+                    <h2>Voice Effects</h2>
+                    <div class="effects-grid">
+                        <button class="effect-btn" data-effect="robot">
+                            <i class="fas fa-robot"></i>
+                            <span>Robot</span>
+                        </button>
+                        <button class="effect-btn" data-effect="deep">
+                            <i class="fas fa-volume-down"></i>
+                            <span>Deep</span>
+                        </button>
+                        <button class="effect-btn" data-effect="chipmunk">
+                            <i class="fas fa-volume-up"></i>
+                            <span>Chipmunk</span>
+                        </button>
+                        <button class="effect-btn" data-effect="female">
+                            <i class="fas fa-female"></i>
+                            <span>Female</span>
+                        </button>
+                        <button class="effect-btn" data-effect="male">
+                            <i class="fas fa-male"></i>
+                            <span>Male</span>
+                        </button>
+                        <button class="effect-btn" data-effect="echo">
+                            <i class="fas fa-echo"></i>
+                            <span>Echo</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Upload Section -->
+            <section class="upload-section">
+                <div class="glass-panel">
+                    <h2>Upload Audio File</h2>
+                    <div class="upload-area" id="uploadArea">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & drop your audio file here</p>
+                        <p class="upload-hint">or click to browse</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Voice Changer Pro. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
